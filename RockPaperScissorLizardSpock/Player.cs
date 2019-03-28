@@ -8,8 +8,8 @@ namespace RockPaperScissorLizardSpock
 {
     class Player
     {
-        string Input;
-        int AiNumber;
+    
+        protected  
         //members variables
 
 
@@ -25,39 +25,44 @@ namespace RockPaperScissorLizardSpock
 
         //member methods
 
-
-        abstract string PlayerInput()
+        public class Human : Player
         {
-            Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
-            string Anwser = Console.ReadLine();
-            switch (Anwser)
+
+            protected string PlayerInput()
             {
-                case "Rock":
-                    Input = "Rock";
-                    return Input;
-                case "Paper":
-                    Input = "Paper";
-                    return Input;
-                case "Scissors":
-                    Input = "Scissors";
-                    return Input;
-                case "Lizard":
-                    Input = "Lizard";
-                    return Input;
-                case "Spock":
-                    Input = "Spock";
-                    return Input;
-                default:
-                    Console.WriteLine("Please enter a real Action");
-                    return PlayerInput();
+                Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
+                string Anwser = Console.ReadLine();
+                switch (Anwser)
+                {
+                    case "Rock":
+                        Input = "Rock";
+                        return Input;
+                    case "Paper":
+                        Input = "Paper";
+                        return Input;
+                    case "Scissors":
+                        Input = "Scissors";
+                        return Input;
+                    case "Lizard":
+                        Input = "Lizard";
+                        return Input;
+                    case "Spock":
+                        Input = "Spock";
+                        return Input;
+                    default:
+                        Console.WriteLine("Please enter a real Action");
+                        return PlayerInput();
 
+                }
             }
-        }
 
-        public int RandomNumber()
-        {
-            AiNumber = Random.Next();
-            return AiNumber
+            public class AI: Player
+
+            public int RandomNumber()
+            {
+                AiNumber = Random.Next();
+                return AiNumber
+            }
         }
     }
 }
