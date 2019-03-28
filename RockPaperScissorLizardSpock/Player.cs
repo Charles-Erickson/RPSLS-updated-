@@ -84,7 +84,7 @@ namespace RockPaperScissorLizardSpock
                         Gesture = "Lizard";
                         return Gesture;
                     }
-                    else (Play == 5)
+                    else if(Play == 5)
                     {
                         Gesture = "Spock";
                         return Gesture;

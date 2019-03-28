@@ -22,8 +22,9 @@ namespace RockPaperScissorLizardSpock
             //"\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
         Player PlayerOne;
         Player PlayerTwo;
+        Game Rounds;
 
-        List<string> GameActions = new List<string>();
+        List<Game> GameActions = new List<Game>();
 
         public void AddToGameActions(GameActions)
         {
@@ -32,6 +33,28 @@ namespace RockPaperScissorLizardSpock
             GameActions.Add("scissors");
             GameActions.Add("lizard");
             GameActions.Add("spock");
+        }
+    } 
+    //public void GamePlay(PlayerOne, PlayerTwo)
+    public int NumberOfPlayers()
+    {
+        Console.WriteLine("How many Players? 1 or2?");
+        int Number =int.Parse( Console.ReadLine());
+        if (Number == 1)
+        {
+            PlayerOne = Human.Player;
+            PlayerTwo = AI.Player;
+        }
+        else if(Number == 2)
+        {
+            PlayerOne = Human.Player;
+            PlayerTwo = Human.Player;
+        }
+        else
+        {
+            Console.WriteLine("Please enter 1 or 2");
+            Console.ReadLine();
+            NumberOfPlayers();
         }
     }
 }
