@@ -8,8 +8,8 @@ namespace RockPaperScissorLizardSpock
 {
     class Player
     {
-    
-        protected  
+
+        protected abstract PlayerInput();
         //members variables
 
 
@@ -27,28 +27,27 @@ namespace RockPaperScissorLizardSpock
 
         public class Human : Player
         {
-
             protected string PlayerInput()
             {
                 Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
-                string Anwser = Console.ReadLine();
-                switch (Anwser)
+                string Answer = Console.ReadLine();
+                switch (Answer)
                 {
                     case "Rock":
-                        Input = "Rock";
-                        return Input;
+                        Answer = "Rock";
+                        return Answer;
                     case "Paper":
-                        Input = "Paper";
-                        return Input;
+                        Answer = "Paper";
+                        return Answer;
                     case "Scissors":
-                        Input = "Scissors";
-                        return Input;
+                        Answer = "Scissors";
+                        return Answer;
                     case "Lizard":
-                        Input = "Lizard";
-                        return Input;
+                        Answer = "Lizard";
+                        return Answer;
                     case "Spock":
-                        Input = "Spock";
-                        return Input;
+                        Answer = "Spock";
+                        return Answer;
                     default:
                         Console.WriteLine("Please enter a real Action");
                         return PlayerInput();
@@ -56,12 +55,44 @@ namespace RockPaperScissorLizardSpock
                 }
             }
 
-            public class AI: Player
-
-            public int RandomNumber()
+            public class AI : Player
             {
-                AiNumber = Random.Next();
-                return AiNumber
+
+
+                protected string PlayerInput()
+                {
+                    string Gesture;
+                    Random AiNumber = new Random();
+                    int Play=int.Parse(AiNumber.Next(1,5));
+                    if (Play == 1)
+                    {
+                        Gesture = "Rock";
+                        return Gesture;
+                    }
+                    else if (Play == 2)
+                    {
+                        Gesture = "Paper";
+                        return Gesture;
+                    }
+                    else if (Play == 3)
+                    {
+                        Gesture = "Scissors";
+                        return Gesture;
+                    }
+                    else if (Play == 4)
+                    {
+                        Gesture = "Lizard";
+                        return Gesture;
+                    }
+                    else if (Play == 5)
+                    {
+                        Gesture = "Spock";
+                        return Gesture;
+                    }
+                    else { }
+                    
+
+                }
             }
         }
     }

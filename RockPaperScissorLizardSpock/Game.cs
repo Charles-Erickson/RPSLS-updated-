@@ -13,7 +13,13 @@ namespace RockPaperScissorLizardSpock
             " scissors decapitates lizard, lizard eats paper, paper disproves Spock,Spock vaporizes rock, and as it always has" +
             ", rock crushes scissors.  First, select if there will be one player or two. Then, players will select which gesture they" +
             "plan to make. After, both gestures will be compared and a winner will be declared.| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +
-            "The game will be played to the best two of three rounds.  Ready? Then LET'S RUMBLE!");
+            "The game will be played to the best two of three rounds.  Ready? Then LET'S RUMBLE!"); //+
+            //" _____      _              _   _             ___                       _ _ _ " +
+            //"|  ___|    | |            | | | |           / _ \                     | | | |" +
+            //"| |__ _ __ | |_ ___ _ __  | |_| |__   ___  / /_\ \_ __ ___ _ __   __ _| | | |" +
+            //"|  __| '_ \| __/ _ \ '__| | __| '_ \ / _ \ |  _  | '__/ _ \ '_ \ / _` | | | |" +
+            //"| |__| | | | ||  __/ |    | |_| | | |  __/ | | | | | |  __/ | | | (_| |_|_|_|" +
+            //"\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
         Player PlayerOne;
         Player PlayerTwo;
 
@@ -31,7 +37,7 @@ namespace RockPaperScissorLizardSpock
 }
 
 
-//public string RPSLS(PlayerInput(), PlayerInput())
+//public string RPSLS(PlayerOne, PlayerTwo)
 //{
     
 //}
