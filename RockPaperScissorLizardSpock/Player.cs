@@ -9,7 +9,7 @@ namespace RockPaperScissorLizardSpock
     class Player
     {
 
-        protected abstract PlayerInput();
+        protected abstract string PlayerInput();
         //members variables
 
 
@@ -27,7 +27,7 @@ namespace RockPaperScissorLizardSpock
 
         public class Human : Player
         {
-            protected string PlayerInput()
+            protected override string PlayerInput()
             {
                 Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
                 string Answer = Console.ReadLine();
@@ -59,11 +59,11 @@ namespace RockPaperScissorLizardSpock
             {
 
 
-                protected string PlayerInput()
+                protected override string PlayerInput()
                 {
                     string Gesture;
                     Random AiNumber = new Random();
-                    int Play=int.Parse(AiNumber.Next(1,5));
+                    int Play = AiNumber.Next(1, 5);
                     if (Play == 1)
                     {
                         Gesture = "Rock";
@@ -84,14 +84,12 @@ namespace RockPaperScissorLizardSpock
                         Gesture = "Lizard";
                         return Gesture;
                     }
-                    else if (Play == 5)
+                    else (Play == 5)
                     {
                         Gesture = "Spock";
                         return Gesture;
-                    }
-                    else { }
+                    }                  
                     
-
                 }
             }
         }
