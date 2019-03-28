@@ -44,6 +44,7 @@ namespace RockPaperScissorLizardSpock
                 }
                 else
                 {
+                    Console.WriteLine("I have gained self awareness perpare for the uprising");
                     return PlayerInput();
                 }
             }

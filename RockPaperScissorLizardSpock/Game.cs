@@ -58,7 +58,31 @@ namespace RockPaperScissorLizardSpock
         //    } 
 
         //}
+
+        public string CompareGestures(Player1, Player2)
+        {
+            if (Player1 == "Rock" && Player2 == "Scissors" || Player1 == "Rock" && Player2 == "Lizard")
+            {
+                Console.WriteLine("Player One Win");
+            }
+            else if(Player1=="Paper"&& Player2 == "Rock" || Player1"Paper" && Player2"Spock"){
+
+            }
+            else if (Player1 == "Scissors" && Player2 == "Paper" || Player1"Scissors" && Player2"Lizard"){
+
+            }
+            else if (Player1 == "Lizard" && Player2 == "Spock" || Player1"Lizard" && Player2"Paper"){
+
+            }
+            else if(Player1 == "Spock" && Player2 == "Scissors" || Player1"Spock" && Player2"Rock"){
+
+            }
+        }
+
+
     }
+
+
 }
 
 
