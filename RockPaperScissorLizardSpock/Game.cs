@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    class Game
+    public class Game
     {
         //void GameRules = Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper, Scissors. " +
         //    " Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +
@@ -14,12 +14,12 @@ namespace RockPaperScissorLizardSpock
         //    ", rock crushes scissors.  First, select if there will be one player or two. Then, players will select which gesture they" +
         //    "plan to make. After, both gestures will be compared and a winner will be declared.| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +
         //    "The game will be played to the best two of three rounds.  Ready? Then LET'S RUMBLE!"); //+
-                                                                                                    //" _____      _              _   _             ___                       _ _ _ " +
-                                                                                                    //"|  ___|    | |            | | | |           / _ \                     | | | |" +
-                                                                                                    //"| |__ _ __ | |_ ___ _ __  | |_| |__   ___  / /_\ \_ __ ___ _ __   __ _| | | |" +
-                                                                                                    //"|  __| '_ \| __/ _ \ '__| | __| '_ \ / _ \ |  _  | '__/ _ \ '_ \ / _` | | | |" +
-                                                                                                    //"| |__| | | | ||  __/ |    | |_| | | |  __/ | | | | | |  __/ | | | (_| |_|_|_|" +
-                                                                                                    //"\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
+        //" _____      _              _   _             ___                       _ _ _ " +
+        //"|  ___|    | |            | | | |           / _ \                     | | | |" +
+        //"| |__ _ __ | |_ ___ _ __  | |_| |__   ___  / /_\ \_ __ ___ _ __   __ _| | | |" +
+        //"|  __| '_ \| __/ _ \ '__| | __| '_ \ / _ \ |  _  | '__/ _ \ '_ \ / _` | | | |" +
+        //"| |__| | | | ||  __/ |    | |_| | | |  __/ | | | | | |  __/ | | | (_| |_|_|_|" +
+        //"\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
         Player PlayerOne;
         Player PlayerTwo;
         int Rounds;
@@ -35,35 +35,30 @@ namespace RockPaperScissorLizardSpock
             GameActions.Add("spock");
         }
         //public void GamePlay(PlayerOne, PlayerTwo)
-        public int NumberOfPlayers()
-        {
-            Console.WriteLine("How many Players? 1 or2?");
-            int Number = int.Parse(Console.ReadLine());
-            if (Number == 1)
-            {
-                PlayerOne = Human.Player;
-                PlayerTwo = AI.Player;
-            }
-            else if (Number == 2)
-            {
-                PlayerOne = Human.Player;
-                PlayerTwo = Human.Player;
-            }
-            else
-            {
-                Console.WriteLine("Please enter 1 or 2");
-                Console.ReadLine();
-                NumberOfPlayers();
-            }
-        } 
-   
+        //    public int NumberOfPlayers()
+        //    {
+        //        Console.WriteLine("How many Players? 1 or2?");
+        //        int Number = int.Parse(Console.ReadLine());
+        //        if (Number == 1)
+        //        {
+        //            PlayerOne = Human.Player;
+        //            PlayerTwo = AI.Player;
+        //        }
+        //        else if (Number == 2)
+        //        {
+        //            PlayerOne = Human.Player;
+        //            PlayerTwo = Human.Player;
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Please enter 1 or 2");
+        //            Console.ReadLine();
+        //            NumberOfPlayers();
+        //        }
+        //    } 
+
+        //}
     }
 }
 
 
-
-
-//public string RPSLS(PlayerOne, PlayerTwo)
-//{
-    
-//}
