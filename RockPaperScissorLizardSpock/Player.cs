@@ -14,20 +14,22 @@ namespace RockPaperScissorLizardSpock
         {
             return "";
         }
-        //members variables
+
+      
+    //members variables
 
 
 
 
 
-        //constructor
+    //constructor
 
 
 
 
 
 
-        //member methods
+    //member methods
 
-    }
+}
 }

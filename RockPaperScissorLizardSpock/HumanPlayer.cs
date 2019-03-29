@@ -12,7 +12,8 @@ namespace RockPaperScissorLizardSpock
             public override string PlayerInput()
             {
                 Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
-            Gesture = Console.ReadLine();
+            string Name = Console.ReadLine();
+            Gesture = char.ToUpper(Name[0]) + Name.Substring(1);
             int linesOfInput = 1 + (Gesture.Length / Console.BufferWidth);
             Console.CursorTop -= linesOfInput;
             Console.CursorLeft = 0;

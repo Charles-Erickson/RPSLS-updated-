@@ -47,6 +47,7 @@ namespace RockPaperScissorLizardSpock
             Console.WriteLine(@"|  __| '_ \| __/ _ \ '__| | __| '_ \ / _ \ |  _  | '__/ _ \ '_ \ / _` | | | |");
             Console.WriteLine(@"| |__| | | | ||  __/ |    | |_| | | |  __/ | | | | | |  __/ | | | (_| |_|_|_|");
             Console.WriteLine(@"\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
+            Console.ReadKey();
             NumberOfPlayers();
             GameRounds();
 
@@ -167,14 +168,16 @@ namespace RockPaperScissorLizardSpock
                 CompareGestures();
                 if (PlayerOne.Score == 2)
                 {
-                    Console.WriteLine("Player Two has lost. Please enjoy this video to lift your sprits 'https://youtu.be/qjwhH_On56M'");
+                    Console.WriteLine("Player Two has lost. Please enjoy this video to lift your sprits");
                     Console.ReadLine();
+                    System.Diagnostics.Process.Start("https://youtu.be/qjwhH_On56M");
                     break;
                 }
                 else if (PlayerTwo.Score == 2)
                 {
-                    Console.WriteLine("Player One has lost. Please enjoy this video to lift your sprits 'https://youtu.be/qjwhH_On56M'");
+                    Console.WriteLine("Player One has lost. Please enjoy this video to lift your sprits");
                     Console.ReadLine();
+                    System.Diagnostics.Process.Start("https://youtu.be/qjwhH_On56M");
                     break;
 
                 }
