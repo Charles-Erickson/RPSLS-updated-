@@ -32,8 +32,8 @@ namespace RockPaperScissorLizardSpock
         }
         public void GamePlay()
         {
-           Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper, Scissors. " +
-          " Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +
+           Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper," +
+               " Scissors. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +
           " scissors decapitates lizard, lizard eats paper, paper disproves Spock,Spock vaporizes rock, and as it always has" +
           ", rock crushes scissors.  First, select if there will be one player or two. Then, players will select which gesture they" +
           "plan to make. After, both gestures will be compared and a winner will be declared.| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +
@@ -51,13 +51,13 @@ namespace RockPaperScissorLizardSpock
         public void NumberOfPlayers()
         {
             Console.WriteLine("How many Players? 1 or2?");
-            int Number = int.Parse(Console.ReadLine());
-            if (Number == 1)
+            string Number =Console.ReadLine();
+            if (Number == "1")
             {
                 PlayerOne = new Human();
                 PlayerTwo = new AI();
             }
-            else if (Number == 2)
+            else if (Number == "2")
             {
                 PlayerOne = new Human();
                 PlayerTwo = new Human();
