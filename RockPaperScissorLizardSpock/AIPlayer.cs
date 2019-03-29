@@ -14,31 +14,36 @@ namespace RockPaperScissorLizardSpock
                 Random AiNumber = new Random();
                 int Play = AiNumber.Next(1, 5);
                 string Play1 = base.PlayerInput();
-                Console.WriteLine(Play);
                 if (Play == 1)
                 {
                     Gesture = "Rock";
-                    return Gesture;
+                Console.WriteLine(Gesture);
+                return Gesture;
+
                 }
                 else if (Play == 2)
                 {
                     Gesture = "Paper";
-                    return Gesture;
+                Console.WriteLine(Gesture);
+                return Gesture;
                 }
                 else if (Play == 3)
                 {
                     Gesture = "Scissors";
-                    return Gesture;
+                Console.WriteLine(Gesture);
+                return Gesture;
                 }
                 else if (Play == 4)
                 {
                     Gesture = "Lizard";
-                    return Gesture;
+                Console.WriteLine(Gesture);
+                return Gesture;
                 }
                 else if (Play == 5)
                 {
                     Gesture = "Spock";
-                    return Gesture;
+                Console.WriteLine(Gesture);
+                return Gesture;
                 }
                 else
                 {

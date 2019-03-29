@@ -12,8 +12,15 @@ namespace RockPaperScissorLizardSpock
             public override string PlayerInput()
             {
                 Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
-                Gesture = Console.ReadLine();
-                switch (Gesture)
+            Gesture = Console.ReadLine();
+            int linesOfInput = 1 + (Gesture.Length / Console.BufferWidth);
+            Console.CursorTop -= linesOfInput;
+            Console.CursorLeft = 0;
+            Console.WriteLine(new string(' ', Gesture.Length));
+            Console.CursorTop -= linesOfInput;
+            Console.CursorLeft = 0;
+
+            switch (Gesture)
                 {
                     case "Rock":
                         Gesture = "Rock";
@@ -37,5 +44,5 @@ namespace RockPaperScissorLizardSpock
                 }
             }
 
-    }
+        }
 }

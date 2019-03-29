@@ -10,8 +10,6 @@ namespace RockPaperScissorLizardSpock
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
             Game PlayTest = new Game();
             PlayTest.GamePlay();
         }
