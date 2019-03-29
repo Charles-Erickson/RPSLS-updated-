@@ -32,21 +32,24 @@ namespace RockPaperScissorLizardSpock
         }
         public void GamePlay()
         {
-           Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper," +
-               " Scissors. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +
-          " scissors decapitates lizard, lizard eats paper, paper disproves Spock,Spock vaporizes rock, and as it always has" +
-          ", rock crushes scissors.  First, select if there will be one player or two. Then, players will select which gesture they" +
-          "plan to make. After, both gestures will be compared and a winner will be declared.| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +
+           Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper," +"\t"+
+               " Scissors. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +"\t"+
+          " scissors decapitates lizard, lizard eats paper, paper disproves Spock,Spock vaporizes rock, and as it always has" +"\t"+
+          ", rock crushes scissors.  First, select if there will be one player or two."+"\t"+
+          " Then, players will select which gesture they" +"\t"+
+          "plan to make. After, both gestures will be compared and a winner will be declared." +"\t"+
+          "| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +"\t"+
           "The game will be played to the best two of three rounds.  Ready? Then LET'S RUMBLE!");
             Console.ReadKey();
-          //  " _____      _              _   _             ___                       _ _ _ " +
-          //  "|  ___|    | |            | | | |           / _ \                     | | | |" +
-          //  "| |__ _ __ | |_ ___ _ __  | |_| |__   ___  / /_\ \_ __ ___ _ __   __ _| | | |" +
-          //  "|  __| '_ \| __/ _ \ '__| | __| '_ \ / _ \ |  _  | '__/ _ \ '_ \ / _` | | | |" +
-          //  "| |__| | | | ||  __/ |    | |_| | | |  __/ | | | | | |  __/ | | | (_| |_|_|_|" +
-          //  "\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
+            Console.WriteLine(@" _____      _              _   _             ___                       _ _ _ ");
+            Console.WriteLine(@"|  ___|    | |            | | | |           / _ \                     | | | |");
+            Console.WriteLine(@"| |__ _ __ | |_ ___ _ __  | |_| |__   ___  / /_\ \_ __ ___ _ __   __ _| | | |");
+            Console.WriteLine(@"|  __| '_ \| __/ _ \ '__| | __| '_ \ / _ \ |  _  | '__/ _ \ '_ \ / _` | | | |");
+            Console.WriteLine(@"| |__| | | | ||  __/ |    | |_| | | |  __/ | | | | | |  __/ | | | (_| |_|_|_|");
+            Console.WriteLine(@"\____/_| |_|\__\___|_|     \__|_| |_|\___| \_| |_/_|  \___|_| |_|\__,_(_|_|_)");
             NumberOfPlayers();
             GameRounds();
+
         }
         public void NumberOfPlayers()
         {
@@ -69,16 +72,24 @@ namespace RockPaperScissorLizardSpock
                 NumberOfPlayers();
             }
         }
+      public void DisplayPlays()
+        {
+            Console.WriteLine("Player One played " + PlayerOne.Gesture);
+            Console.WriteLine("Player Two played " + PlayerTwo.Gesture);
+            Console.ReadKey();
 
+        }
 
 
         public void CompareGestures()
         {
             PlayerOne.PlayerInput();
             PlayerTwo.PlayerInput();
+            DisplayPlays();
 
             if (PlayerOne.Gesture == "Rock" && PlayerTwo.Gesture == "Scissors" || PlayerOne.Gesture == "Rock" && PlayerTwo.Gesture == "Lizard")
             {
+
                 Console.WriteLine("Player One Win");
                 PlayerOne.Score++;
                 Console.ReadKey();
@@ -165,6 +176,7 @@ namespace RockPaperScissorLizardSpock
                     Console.WriteLine("Player One has lost. Please enjoy this video to lift your sprits 'https://youtu.be/qjwhH_On56M'");
                     Console.ReadLine();
                     break;
+
                 }
                 else
                 {
