@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    abstract class Player
+    abstract public class Player
     {
-
+        public int Score;
+        public string Gesture;
         public virtual string PlayerInput()
         {
             return "";

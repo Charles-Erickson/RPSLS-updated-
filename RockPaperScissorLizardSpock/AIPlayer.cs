@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    class AIPlayer
-    {
-        public class AI : Player
+    
+        public class AI: Player
         {
             public override string PlayerInput()
             {
-                string Gesture;
                 Random AiNumber = new Random();
                 int Play = AiNumber.Next(1, 5);
                 string Play1 = base.PlayerInput();
@@ -50,4 +48,4 @@ namespace RockPaperScissorLizardSpock
             }
         }
     }
-}
+

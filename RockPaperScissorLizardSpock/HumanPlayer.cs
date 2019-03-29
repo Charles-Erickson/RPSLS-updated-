@@ -6,37 +6,36 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    class HumanPlayer
-    {
+
         public class Human : Player
         {
             public override string PlayerInput()
             {
                 Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
-                string Answer = Console.ReadLine();
-                switch (Answer)
+                Gesture = Console.ReadLine();
+                switch (Gesture)
                 {
                     case "Rock":
-                        Answer = "Rock";
-                        return Answer;
+                        Gesture = "Rock";
+                        return Gesture;
                     case "Paper":
-                        Answer = "Paper";
-                        return Answer;
+                        Gesture = "Paper";
+                        return Gesture;
                     case "Scissors":
-                        Answer = "Scissors";
-                        return Answer;
+                        Gesture = "Scissors";
+                        return Gesture;
                     case "Lizard":
-                        Answer = "Lizard";
-                        return Answer;
+                        Gesture = "Lizard";
+                        return Gesture;
                     case "Spock":
-                        Answer = "Spock";
-                        return Answer;
+                        Gesture = "Spock";
+                        return Gesture;
                     default:
                         Console.WriteLine("Please enter a real Action");
                         return PlayerInput();
 
                 }
             }
-        }
+
     }
 }
