@@ -22,7 +22,7 @@ namespace RockPaperScissorLizardSpock
             AddToGameActions();
         }
 
-        private void AddToGameActions()
+        public void AddToGameActions()
         {
             GameActions.Add("Rock");
             GameActions.Add("Paper");
@@ -32,13 +32,13 @@ namespace RockPaperScissorLizardSpock
         }
         public void GamePlay()
         {
-           Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper," +"\t"+
-               " Scissors. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +"\t"+
-          " scissors decapitates lizard, lizard eats paper, paper disproves Spock,Spock vaporizes rock, and as it always has" +"\t"+
-          ", rock crushes scissors.  First, select if there will be one player or two."+"\t"+
-          " Then, players will select which gesture they" +"\t"+
-          "plan to make. After, both gestures will be compared and a winner will be declared." +"\t"+
-          "| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +"\t"+
+           Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! This is a more advanced version of the classic game Rock, Paper," +"\n"+
+               " Scissors. Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors," +"\n"+
+          " scissors decapitates lizard, lizard eats paper, paper disproves Spock,Spock vaporizes rock, and as it always has" +"\n"+
+          ", rock crushes scissors.  First, select if there will be one player or two."+"\n"+
+          " Then, players will select which gesture they" +"\n"+
+          "plan to make. After, both gestures will be compared and a winner will be declared." +"\n"+
+          "| IN THE EVENT OF A TIE THE ROUND WILL BE REPEATED|" +"\n"+
           "The game will be played to the best two of three rounds.  Ready? Then LET'S RUMBLE!");
             Console.ReadKey();
             Console.WriteLine(@" _____      _              _   _             ___                       _ _ _ ");
@@ -55,13 +55,25 @@ namespace RockPaperScissorLizardSpock
         public void NumberOfPlayers()
         {
             Console.WriteLine("How many Players? 1 or2?");
-            string Number =Console.ReadLine();
-            if (Number == "1")
+            int Number=0;
+
+            try
+            {
+                Number = int.Parse(Console.ReadLine());
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Value needs to be a number");
+            }
+
+
+
+            if (Number == 1)
             {
                 PlayerOne = new Human();
                 PlayerTwo = new AI();
             }
-            else if (Number == "2")
+            else if (Number == 2)
             {
                 PlayerOne = new Human();
                 PlayerTwo = new Human();
@@ -69,7 +81,7 @@ namespace RockPaperScissorLizardSpock
             else
             {
                 Console.WriteLine("Please enter 1 or 2");
-                Console.ReadLine();
+                Console.ReadKey();
                 NumberOfPlayers();
             }
         }

@@ -13,7 +13,7 @@ namespace RockPaperScissorLizardSpock
             {
                 Console.WriteLine("Please  Enter 'Rock,' 'Paper,' 'Scissors,' 'Lizard,' or 'Spock'");
             string Name = Console.ReadLine();
-            Gesture = char.ToUpper(Name[0]) + Name.Substring(1);
+            Gesture= System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(Name.ToLower());
             int linesOfInput = 1 + (Gesture.Length / Console.BufferWidth);
             Console.CursorTop -= linesOfInput;
             Console.CursorLeft = 0;

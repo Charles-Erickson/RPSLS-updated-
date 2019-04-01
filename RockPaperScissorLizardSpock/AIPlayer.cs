@@ -10,7 +10,7 @@ namespace RockPaperScissorLizardSpock
         public class AI: Player
         {
             public override string PlayerInput()
-            {
+          {
                 Random AiNumber = new Random();
                 int Play = AiNumber.Next(1, 5);
                 string Play1 = base.PlayerInput();
