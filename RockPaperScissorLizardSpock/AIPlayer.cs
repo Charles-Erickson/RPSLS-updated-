@@ -17,32 +17,27 @@ namespace RockPaperScissorLizardSpock
                 if (Play == 1)
                 {
                     Gesture = "Rock";
-                Console.WriteLine(Gesture);
                 return Gesture;
 
                 }
                 else if (Play == 2)
                 {
                     Gesture = "Paper";
-                Console.WriteLine(Gesture);
                 return Gesture;
                 }
                 else if (Play == 3)
                 {
                     Gesture = "Scissors";
-                Console.WriteLine(Gesture);
                 return Gesture;
                 }
                 else if (Play == 4)
                 {
                     Gesture = "Lizard";
-                Console.WriteLine(Gesture);
                 return Gesture;
                 }
                 else if (Play == 5)
                 {
                     Gesture = "Spock";
-                Console.WriteLine(Gesture);
                 return Gesture;
                 }
                 else
