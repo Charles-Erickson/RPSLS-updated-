@@ -12,6 +12,8 @@ namespace RockPaperScissorLizardSpock
         {
             Game PlayTest = new Game();
             PlayTest.GamePlay();
+
         }
     }
 }
+    

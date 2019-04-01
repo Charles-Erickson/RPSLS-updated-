@@ -14,3 +14,5 @@ namespace RockPaperScissorLizardSpock
         {
             return "";
         }
+    }
+}
